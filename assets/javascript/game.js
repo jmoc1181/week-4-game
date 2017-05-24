@@ -1,18 +1,15 @@
-// Show the a random number between 19 and 120 
-	// Check if any button is clicked...
-    // $(document).on("click", "button", function() {
+// Generate random number between 19 and 120 
 
-     // Generate random number
-    
-    
+  //  $(document).on("click", "button", function() {
+
      var minNumber = 19;
      var maxNumber = 120;
 
      var randomNumber = randomNumberFromRange(minNumber, maxNumber);
+     var userscore = 0; 
 
-
-      function randomNumberFromRange(min,max) {
-      return Math.floor(Math.random()*(max-min+1)+min);
+     function randomNumberFromRange(min,max) {
+     return Math.floor(Math.random()*(max-min+1)+min);
 }
      console.log(randomNumber);
 
@@ -21,44 +18,74 @@
      $('#randomNumber').append(paragraph);
 
 
+ 	randomCrystal(); 
 
 
+//Generating the random numbers in the crystals - // Each crytal is a random hidden value between 1 - 12.  
     function randomCrystal() { 
-    var minNumbercrystal = 1 ;
-    var maxNumbercrystal = 12;
+    var minNumberCrystal = 1 ;
+    var maxNumberCrystal = 12;
 
-    var randomnumberCrystal = randomNumberFromRangeCrystal(minNumbercrystal, maxNumbercrystal);
+    var randomnumberCrystal1 = randomNumberFromRangeCrystal(minNumberCrystal, maxNumberCrystal);
+    var randomnumberCrystal2 = randomNumberFromRangeCrystal(minNumberCrystal, maxNumberCrystal);
+    var randomnumberCrystal3 = randomNumberFromRangeCrystal(minNumberCrystal, maxNumberCrystal);
+    var randomnumberCrystal4 = randomNumberFromRangeCrystal(minNumberCrystal, maxNumberCrystal);
 
+
+
+//get random number for crystals 
     function randomNumberFromRangeCrystal(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-    console.log(randomnumberCrystal);
 
-     var bCrystal = randomnumberCrystal;
-     var wCrystal = randomnumberCrystal;
-     var yCrystal = randomnumberCrystal;
-     var pCrystal = randomnumberCrystal;
+     //Variables hole the crystal numbers 
+     var bCrystal = randomnumberCrystal1;
+     var wCrystal = randomnumberCrystal2;
+     var yCrystal = randomnumberCrystal3;
+     var pCrystal = randomnumberCrystal4;
+     //var userscore = 0; 
 
 	 console.log(bCrystal); 
 	 console.log(wCrystal); 
 	 console.log(yCrystal); 
 	 console.log(pCrystal); 
+
+
+
+
+	  $('#bCrystal').click(function() {
+	  (userscore += bCrystal);	
+	  $('#userscore').html(userscore);
+	  check(); 	
+});
+
+	  $('#wCrystal').click(function() {
+	  	(userscore += wCrystal);
+	  $('#userscore').html(userscore);	
+	  check(); 	
+});
+
+	  $('#yCrystal').click(function() {
+	  (userscore += yCrystal);
+	  $('#userscore').html(userscore);	
+	  check(); 	
+});
+
+	  $('#pCrystal').click(function() {
+	  (userscore += pCrystal); 
+	  $('#userscore').html(userscore);	
+	  check(); 	
+});
+
+
 } 
 
- 	randomCrystal(); 
 
+function check() {  
+	 if (userscore > 30 ) { 
+	 	alert('tgtg');
+	 }}
 
-
-
-
-
-
-
-
-
-
-
-// Each crytal is a random hidden value between 1 - 12.  
 
 
 
@@ -69,10 +96,6 @@
 
 //Have button and process to start and restart game 
 
-
-//At the start of each game, 
-  //- Game create random number between 19 and 120
-  //- each crystal creates random number 1-12, with each having different random number 
 
 
 //Capture player crystal selection on click. 
