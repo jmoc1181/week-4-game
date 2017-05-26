@@ -1,5 +1,13 @@
 // Generate random number between 19 and 120 
 
+     var bCrystal
+     var wCrystal
+     var yCrystal
+     var pCrystal 
+
+
+
+
 	function reset () { 
 		userscore = 0; 
 		$('#userscore').text(userscore); 
@@ -22,7 +30,7 @@
 
    //  var paragraph = $('<p>');
      //paragraph.text(randomNumber);
-     $('#randomNumber').text(randomNumber);  
+    $('#randomNumber').text(randomNumber);
 
 
      var userscore = 0;  
@@ -31,7 +39,7 @@
 	 var win = 0; 
 	 var loss = 0; 
 
-	 reset(); 
+	reset();
 
 
 //Generating the random numbers in the crystals - // Each crytal is a random hidden value between 1 - 12.  
@@ -52,17 +60,17 @@
 }
 
      //Variables hole the crystal numbers 
-     var bCrystal = randomnumberCrystal1;
-     var wCrystal = randomnumberCrystal2;
-     var yCrystal = randomnumberCrystal3;
-     var pCrystal = randomnumberCrystal4;
+     bCrystal = randomnumberCrystal1;
+     wCrystal = randomnumberCrystal2;
+     yCrystal = randomnumberCrystal3;
+     pCrystal = randomnumberCrystal4;
 
 	 console.log(bCrystal); 
 	 console.log(wCrystal); 
 	 console.log(yCrystal); 
 	 console.log(pCrystal); 
 
-
+}
 
 	 //on click adds the random number assigned to that crustal to the userscore 
 	  $('#bCrystal').click(function() {
@@ -93,7 +101,7 @@
 });
 
 
-}
+
 
 
 //Check if the usernumber is over over right on the random number generated 
