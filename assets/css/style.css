@@ -10,7 +10,7 @@
   }
 
 .container { 
-	max-width: 700px;
+	max-width: 680px;
  }
 
 
@@ -28,7 +28,7 @@
 
  .diamondrow {
 
- 	height: 100px;
+ 	height: 80px;
  }
 
 .rando { 
@@ -51,4 +51,13 @@
 	padding-top: 20px;
  }
 
+.winloss { 
+	height: 65px;
+	background-color: #F0F8FF; 
+	color: #00BFFF; 
+	text-align: center;
+	font-size: 20px;
+
+
+ }
 

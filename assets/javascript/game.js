@@ -1,24 +1,37 @@
 // Generate random number between 19 and 120 
 
-  //  $(document).on("click", "button", function() {
+	function reset () { 
+		userscore = 0; 
+		$('#userscore').text(userscore); 
+		randomNumber = randomNumberFromRange(minNumber, maxNumber);
+		randomCrystal(); 
+		$('#randomNumber').text(randomNumber);  
+
+	}
+
 
      var minNumber = 19;
      var maxNumber = 120;
 
+     
      var randomNumber = randomNumberFromRange(minNumber, maxNumber);
-     var userscore = 0; 
 
      function randomNumberFromRange(min,max) {
-     return Math.floor(Math.random()*(max-min+1)+min);
+     return Math.floor(Math.random()*(max-min+1)+min);     
 }
-     console.log(randomNumber);
 
-     var paragraph = $('<p>');
-     paragraph.text(randomNumber);
-     $('#randomNumber').append(paragraph);
+   //  var paragraph = $('<p>');
+     //paragraph.text(randomNumber);
+     $('#randomNumber').text(randomNumber);  
 
 
- 	randomCrystal(); 
+     var userscore = 0;  
+	 console.log(randomNumber);
+
+	 var win = 0; 
+	 var loss = 0; 
+
+	 reset(); 
 
 
 //Generating the random numbers in the crystals - // Each crytal is a random hidden value between 1 - 12.  
@@ -43,7 +56,6 @@
      var wCrystal = randomnumberCrystal2;
      var yCrystal = randomnumberCrystal3;
      var pCrystal = randomnumberCrystal4;
-     //var userscore = 0; 
 
 	 console.log(bCrystal); 
 	 console.log(wCrystal); 
@@ -52,62 +64,70 @@
 
 
 
-
+	 //on click adds the random number assigned to that crustal to the userscore 
 	  $('#bCrystal').click(function() {
 	  (userscore += bCrystal);	
 	  $('#userscore').html(userscore);
-	  check(); 	
+	   check();
+
 });
 
 	  $('#wCrystal').click(function() {
 	  	(userscore += wCrystal);
 	  $('#userscore').html(userscore);	
-	  check(); 	
+	  check();
 });
 
 	  $('#yCrystal').click(function() {
 	  (userscore += yCrystal);
 	  $('#userscore').html(userscore);	
-	  check(); 	
+		check();	
+	  
 });
 
 	  $('#pCrystal').click(function() {
 	  (userscore += pCrystal); 
 	  $('#userscore').html(userscore);	
-	  check(); 	
+	  check(); 
+	  
 });
 
 
-} 
+}
 
 
+//Check if the usernumber is over over right on the random number generated 
 function check() {  
-	 if (userscore > 30 ) { 
-	 	alert('tgtg');
-	 }}
+	 if (userscore === randomNumber ) { 
+	 	alert('Win!');
+	 	win = win + 1 ; 
+	  $('#win').html(win);
+	  reset();
+
+
+		}	
+
+
+	if (userscore > randomNumber)	{
+		alert('LOSE!');
+	  loss = loss + 1;
+	  $('#loss').html(loss);
+	  reset();
+
+
+	}}
 
 
 
-
-
-
-
-//Create variables, one for each crystal. Create IDs for each crystal in HTML.     
 
 //Have button and process to start and restart game 
-
-
-
-//Capture player crystal selection on click. 
-
-
-//Compute new player total 
-//show new updated amount on screen.    
+ 
 
 
 
 
-//- player wins if amount matches 
+
+
 //- players loses when player number goes over comp random number 
 
 //- as player wins or loses, have two counters track total wins and losses 
