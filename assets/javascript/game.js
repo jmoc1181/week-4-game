@@ -14,7 +14,7 @@
 		randomCrystal(); 
 		$('#randomNumber').text(randomNumber);  
 
-	}
+}
 
 
      var minNumber = 19;
@@ -107,9 +107,7 @@ function check() {
 	 	win = win + 1 ; 
 	  $('#win').html(win);
 	  reset();
-
-
-		}	
+}	
 
 
 	if (userscore > randomNumber)	{
@@ -117,9 +115,7 @@ function check() {
 	  loss = loss + 1;
 	  $('#loss').html(loss);
 	  reset();
-
-
-	}}
+}}
 
 
 
