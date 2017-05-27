@@ -1,11 +1,10 @@
 // Generate random number between 19 and 120 
+	 var name = prompt('Whats your name?');
 
      var bCrystal
      var wCrystal
      var yCrystal
      var pCrystal 
-
-
 
 
 	function reset () { 
@@ -20,16 +19,13 @@
 
      var minNumber = 19;
      var maxNumber = 120;
-
-     
      var randomNumber = randomNumberFromRange(minNumber, maxNumber);
 
      function randomNumberFromRange(min,max) {
      return Math.floor(Math.random()*(max-min+1)+min);     
 }
 
-   //  var paragraph = $('<p>');
-     //paragraph.text(randomNumber);
+  //rando text 
     $('#randomNumber').text(randomNumber);
 
 
@@ -107,7 +103,7 @@
 //Check if the usernumber is over over right on the random number generated 
 function check() {  
 	 if (userscore === randomNumber ) { 
-	 	alert('Win!');
+	 	alert('You WIN ' + name + '!' );
 	 	win = win + 1 ; 
 	  $('#win').html(win);
 	  reset();
@@ -117,7 +113,7 @@ function check() {
 
 
 	if (userscore > randomNumber)	{
-		alert('LOSE!');
+		alert(' You LOSE ' + name + ' :(  Try again');
 	  loss = loss + 1;
 	  $('#loss').html(loss);
 	  reset();
@@ -130,25 +126,7 @@ function check() {
 
 //Have button and process to start and restart game 
  
-
-
-
-
-
-
-//- players loses when player number goes over comp random number 
-
-//- as player wins or loses, have two counters track total wins and losses 
-
-//- updated screen with each win or loss 
-
-//Game automatically refreshes after win/loss game state 
-//Crystals get new amounts. 
-
-//New comp number randomly chosen 
-
-//Reset player score and score counter 
-
+	
 
 
 
