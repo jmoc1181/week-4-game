@@ -6,7 +6,6 @@
      var yCrystal
      var pCrystal 
 
-
 	function reset () { 
 		userscore = 0; 
 		$('#userscore').text(userscore); 
@@ -15,8 +14,6 @@
 		$('#randomNumber').text(randomNumber);  
 
 }
-
-
      var minNumber = 19;
      var maxNumber = 120;
      var randomNumber = randomNumberFromRange(minNumber, maxNumber);
@@ -27,8 +24,6 @@
 
   //rando text 
     $('#randomNumber').text(randomNumber);
-
-
      var userscore = 0;  
 	 console.log(randomNumber);
 
@@ -36,7 +31,6 @@
 	 var loss = 0; 
 
 	reset();
-
 
 //Generating the random numbers in the crystals - // Each crytal is a random hidden value between 1 - 12.  
     function randomCrystal() { 
@@ -47,9 +41,6 @@
     var randomnumberCrystal2 = randomNumberFromRangeCrystal(minNumberCrystal, maxNumberCrystal);
     var randomnumberCrystal3 = randomNumberFromRangeCrystal(minNumberCrystal, maxNumberCrystal);
     var randomnumberCrystal4 = randomNumberFromRangeCrystal(minNumberCrystal, maxNumberCrystal);
-
-
-
 //get random number for crystals 
     function randomNumberFromRangeCrystal(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
